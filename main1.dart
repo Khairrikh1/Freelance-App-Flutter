@@ -3,44 +3,52 @@ import 'home_content.dart';
 import 'photographers_page.dart';
 
 void main() {
-  runApp(PhotoMateApp());
+  runApp(const PhotoMateApp());
 }
 
 class PhotoMateApp extends StatelessWidget {
+  const PhotoMateApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: const HomePage(), // Important: const here
     );
   }
 }
 
 class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
   @override
-  _HomePageState createState() => _HomePageState();
+  State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
   int _currentIndex = 0;
 
-  final List<Widget> _pages = [
+  final List<Widget> _pages = const [
+    // const here
     HomeContent(),
     PhotographersPage(),
     Center(
-        child: Text('Profile',
-            style: TextStyle(color: Colors.white, fontSize: 24))),
+      child: Text(
+        'Profile',
+        style: TextStyle(color: Colors.white, fontSize: 24),
+      ),
+    ),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [
               Colors.black,
-              Colors.blueGrey.shade900,
+              Colors.blueGrey,
             ],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
@@ -58,7 +66,7 @@ class _HomePageState extends State<HomePage> {
             _currentIndex = index;
           });
         },
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
