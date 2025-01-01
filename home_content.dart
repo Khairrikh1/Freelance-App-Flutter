@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class HomeContent extends StatelessWidget {
+  const HomeContent({super.key}); // Add const constructor
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -9,8 +11,9 @@ class HomeContent extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 20),
-            Text(
+            const SizedBox(height: 20), // Add const here
+            const Text(
+              // Add const here
               'Welcome to PhotoMate IIUM',
               style: TextStyle(
                 color: Colors.white,
@@ -18,16 +21,18 @@ class HomeContent extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 10),
-            Text(
+            const SizedBox(height: 10), // Add const here
+            const Text(
+              // Add const here
               'Explore photographers and manage your profile.',
               style: TextStyle(
-                color: Colors.grey.shade300,
+                color: Colors.grey, // Simplified color
                 fontSize: 16,
               ),
             ),
-            SizedBox(height: 20),
-            Text(
+            const SizedBox(height: 20), // Add const here
+            const Text(
+              // Add const here
               'Featured Photographers',
               style: TextStyle(
                 color: Colors.white,
@@ -35,15 +40,15 @@ class HomeContent extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 10),
-            Container(
+            const SizedBox(height: 10), // Add const here
+            SizedBox(
               height: 200,
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 itemCount: 5,
                 itemBuilder: (context, index) {
                   return Container(
-                    margin: EdgeInsets.only(right: 16),
+                    margin: const EdgeInsets.only(right: 16), // Add const here
                     width: 150,
                     decoration: BoxDecoration(
                       color: Colors.grey.shade800,
@@ -52,15 +57,17 @@ class HomeContent extends StatelessWidget {
                     child: Center(
                       child: Text(
                         'Photographer ${index + 1}',
-                        style: TextStyle(color: Colors.white),
+                        style: const TextStyle(
+                            color: Colors.white), // Add const here
                       ),
                     ),
                   );
                 },
               ),
             ),
-            SizedBox(height: 20),
-            Text(
+            const SizedBox(height: 20), // Add const here
+            const Text(
+              // Add const here
               'Recent Photos',
               style: TextStyle(
                 color: Colors.white,
@@ -68,11 +75,12 @@ class HomeContent extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10), // Add const here
             GridView.builder(
               shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(),
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              physics: const NeverScrollableScrollPhysics(), // Add const here
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                // Add const here
                 crossAxisCount: 2,
                 crossAxisSpacing: 10,
                 mainAxisSpacing: 10,
@@ -87,7 +95,8 @@ class HomeContent extends StatelessWidget {
                   child: Center(
                     child: Text(
                       'Photo ${index + 1}',
-                      style: TextStyle(color: Colors.white),
+                      style: const TextStyle(
+                          color: Colors.white), // Add const here
                     ),
                   ),
                 );
