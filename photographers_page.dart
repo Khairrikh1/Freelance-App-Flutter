@@ -1,33 +1,38 @@
 import 'package:flutter/material.dart';
+import 'booking.dart';
 
 class PhotographersPage extends StatelessWidget {
+  const PhotographersPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
+    const Color myBlueGrey = Color(0xFF37474F);
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        title: Text('Photographers'),
+        title: const Text('Photographers'),
         backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       ),
       body: ListView.builder(
-        itemCount: 5, // Example count
+        itemCount: 5,
         itemBuilder: (context, index) {
           return Card(
-            color: Colors.blueGrey.shade800,
-            margin: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+            color: myBlueGrey,
+            margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
             child: ListTile(
-              leading: Icon(Icons.person, color: Colors.white),
+              leading: const Icon(Icons.person, color: Colors.white),
               title: Text(
                 'Photographer ${index + 1}',
-                style: TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.white),
               ),
-              trailing: Icon(Icons.arrow_forward, color: Colors.white),
+              trailing: const Icon(Icons.arrow_forward, color: Colors.white),
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) => PhotographerDetailsPage(
-                        photographerName: 'Photographer ${index + 1}'),
+                      photographerName: 'Photographer ${index + 1}',
+                    ),
                   ),
                 );
               },
@@ -42,7 +47,7 @@ class PhotographersPage extends StatelessWidget {
 class PhotographerDetailsPage extends StatelessWidget {
   final String photographerName;
 
-  PhotographerDetailsPage({required this.photographerName});
+  const PhotographerDetailsPage({Key? key, required this.photographerName}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -59,29 +64,67 @@ class PhotographerDetailsPage extends StatelessWidget {
           children: [
             Text(
               'Welcome to $photographerName\'s Page',
-              style: TextStyle(color: Colors.white, fontSize: 20),
+              style: const TextStyle(color: Colors.white, fontSize: 20),
               textAlign: TextAlign.center,
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                // Navigate to portfolio
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const PortfolioPage(), // Navigate to portfolio
+                  ),
+                );
               },
               style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color.fromARGB(255, 255, 255, 255)),
-              child: Text('View Portfolio'),
+                backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+              ),
+              child: const Text('View Portfolio'),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             ElevatedButton(
               onPressed: () {
-                // Navigate to booking
+                showModalBottomSheet(
+                  context: context,
+                  isScrollControlled: true,
+                  backgroundColor: Colors.grey.shade800,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20.0),
+                  ),
+                  builder: (context) => BookingForm(
+                    onBookingSubmitted: (booking) {
+                      Navigator.pop(context);
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(content: Text('Booking Confirmed!')),
+                      );
+                    },
+                  ),
+                );
               },
               style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color.fromARGB(255, 253, 253, 253)),
-              child: Text('Book Now'),
+                backgroundColor: const Color.fromARGB(255, 253, 253, 253),
+              ),
+              child: const Text('Book Now'),
             ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class PortfolioPage extends StatelessWidget {
+  const PortfolioPage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Portfolio'),
+      ),
+      body: const Center(
+        child: Text('Portfolio Content Here'),
       ),
     );
   }
