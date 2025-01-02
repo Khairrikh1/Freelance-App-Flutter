@@ -236,10 +236,10 @@ Preparation Period: 25 January 2025 – 29 January 2025
 
 # References
 
-Google. (2023, April 5). Firebase documentation. https://firebase.google.com/docs
-Stack Overflow (2024). Flutter questions. https://stackoverflow.com/questions/tagged/flutter
-OpenAI. (2024). OpenAI API documentation. https://platform.openai.com/docs
-SimplyBook (2024). Features & Integrations. https://simplybook.me/en/booking-system-features-and-integrations
-OpenAI (2024). Features that can be improved. https://chatgpt.com
-V. Pham (2024). Guide to Mobile Application Development. https://kms-solutions.asia/blogs/an-ultimate-guide-to-mobile-application-development
+1. Google. (2023, April 5). Firebase documentation. https://firebase.google.com/docs
+2. Stack Overflow (2024). Flutter questions. https://stackoverflow.com/questions/tagged/flutter
+3. OpenAI. (2024). OpenAI API documentation. https://platform.openai.com/docs
+4. SimplyBook (2024). Features & Integrations. https://simplybook.me/en/booking-system-features-and-integrations
+5. OpenAI (2024). Features that can be improved. https://chatgpt.com
+6. V. Pham (2024). Guide to Mobile Application Development. https://kms-solutions.asia/blogs/an-ultimate-guide-to-mobile-application-development
 
