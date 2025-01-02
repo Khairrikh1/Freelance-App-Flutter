@@ -161,3 +161,27 @@ Optimize loading times for portfolio images using lazy loading techniques.
  Sequence Diagram:
 Illustrate the interaction flow between users (clients and photographers), the app, and the database/backend.
 ![screenshot](diagram1.png)
+
+# Screen Navigation Flow:
+
+Home Screen:
+Search bar, featured photographers, and navigation options.
+
+Photographer Profile:
+Portfolio, packages, availability calendar, and contact info.
+
+# Booking Flow:
+
+1.	Select package.
+2.	Choose available date.
+3.	Confirm booking.
+4.	Payment screen.
+
+# User Dashboard:
+
+Upcoming bookings, past bookings, and wishlist.
+
+Admin Panel (optional):
+
+Manage photographers, clients, and reviews.
+![screenshot](diagram2.png)
