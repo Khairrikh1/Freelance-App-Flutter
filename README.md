@@ -185,3 +185,61 @@ Admin Panel (optional):
 
 Manage photographers, clients, and reviews.
 ![screenshot](diagram2.png)
+
+
+# Ghantt Chart and Timeline
+
+Here is the timeline for the tasks associated with the project:
+![screenshot](diagram3.png)
+
+# A) Case Study 1
+
+Project Initiation
+
+Start Date: 27 November 2024
+End Date: 5 December 2024
+Duration: 8 days
+
+Requirement Analysis
+
+Start Date: 6 December 2024
+End Date: 20 December 2024
+Duration: 14 days
+
+# B) Case Study 2
+
+Prototyping
+
+Start Date: 29 December 2024
+End Date: 4 January 2025
+Duration: 7 days
+
+Design
+
+Start Date: 5 January 2025
+End Date: 14 January 2025
+Duration: 10 days
+
+# C) Group Project
+
+Development
+
+Start Date: 15 January 2025
+End Date: 24 January 2025
+Duration: 10 days
+
+Presentation
+
+Deadline: 30 January 2025
+Preparation Period: 25 January 2025 – 29 January 2025 
+
+
+# References
+
+Google. (2023, April 5). Firebase documentation. https://firebase.google.com/docs
+Stack Overflow (2024). Flutter questions. https://stackoverflow.com/questions/tagged/flutter
+OpenAI. (2024). OpenAI API documentation. https://platform.openai.com/docs
+SimplyBook (2024). Features & Integrations. https://simplybook.me/en/booking-system-features-and-integrations
+OpenAI (2024). Features that can be improved. https://chatgpt.com
+V. Pham (2024). Guide to Mobile Application Development. https://kms-solutions.asia/blogs/an-ultimate-guide-to-mobile-application-development
+
