@@ -160,4 +160,4 @@ Optimize loading times for portfolio images using lazy loading techniques.
 # Logical Design
  Sequence Diagram:
 Illustrate the interaction flow between users (clients and photographers), the app, and the database/backend.
-
+![screenshot](diagram1.png)
