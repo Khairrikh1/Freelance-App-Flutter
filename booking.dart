@@ -17,8 +17,7 @@ class Booking {
 class BookingForm extends StatefulWidget {
   final Function(Booking) onBookingSubmitted;
 
-  const BookingForm({Key? key, required this.onBookingSubmitted})
-      : super(key: key);
+  const BookingForm({super.key, required this.onBookingSubmitted});
 
   @override
   State<BookingForm> createState() => _BookingFormState();
@@ -33,7 +32,8 @@ class _BookingFormState extends State<BookingForm> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
+      padding:
+          EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
       child: Container(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -120,3 +120,4 @@ class _BookingFormState extends State<BookingForm> {
     );
   }
 }
+
