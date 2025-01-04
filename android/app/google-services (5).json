@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "445368116048",
+    "project_id": "datamate-8d8ac",
+    "storage_bucket": "datamate-8d8ac.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:445368116048:android:fea28a255a0a22cda64255",
+        "android_client_info": {
+          "package_name": "com.example.photomate"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-7mi-UMLn4ShnRRfJuKZezpIdGyGUTws"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
