@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'booking.dart';
 
 class PhotographersPage extends StatelessWidget {
-  const PhotographersPage({Key? key}) : super(key: key);
+  const PhotographersPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +47,7 @@ class PhotographersPage extends StatelessWidget {
 class PhotographerDetailsPage extends StatelessWidget {
   final String photographerName;
 
-  const PhotographerDetailsPage({Key? key, required this.photographerName}) : super(key: key);
+  const PhotographerDetailsPage({super.key, required this.photographerName});
 
   @override
   Widget build(BuildContext context) {
@@ -73,7 +73,8 @@ class PhotographerDetailsPage extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const PortfolioPage(), // Navigate to portfolio
+                    builder: (context) =>
+                        const PortfolioPage(), // Navigate to portfolio
                   ),
                 );
               },
@@ -115,7 +116,7 @@ class PhotographerDetailsPage extends StatelessWidget {
 }
 
 class PortfolioPage extends StatelessWidget {
-  const PortfolioPage({Key? key}) : super(key: key);
+  const PortfolioPage({super.key});
 
   @override
   Widget build(BuildContext context) {
